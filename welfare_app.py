@@ -799,15 +799,8 @@ with tab_faq:
     # --------------------------------------------------
     # 📊 시각화 — 실제 KoWePS 데이터 기반 수치로 교체
     # --------------------------------------------------
-    system_os = platform.system()
-    if system_os == "Darwin":
-        font_name = "AppleGothic"
-    elif system_os == "Windows":
-        font_name = "Malgun Gothic"
-    else:
-        font_name = "NanumGothic"
-
-    kor_font = fm.FontProperties(family=font_name)
+    kor_font = fm.FontProperties(family='NanumGothic')
+    plt.rcParams['font.family'] = 'NanumGothic'
     plt.rcParams['axes.unicode_minus'] = False
 
     COLOR_POS = '#D9764A'
